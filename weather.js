@@ -4,6 +4,7 @@ $(document).ready(function() {
   var tunit = " &deg;C";
   var speed = "meters/second";
   var pics = ["img/sun.svg", "img/flower.svg", "img/leaf.svg", "img/snowflake.svg"];
+  var colours = ["#F4E285", "#8CB369", "#F4A259", "#3B8EA5"]
 
   $("#change").click(function() {
     if (units == "metric") {
@@ -71,16 +72,16 @@ $(document).ready(function() {
 
     if (temp <= thresholds[0]) {
       $("#season").html("<img class='wimg' src='" + pics[3] +"'/>");
-      $("body").css('background-color', "#3B8EA5");
+      $("body").css('background-color', colours[3]);
     }  else if (temp <= thresholds[1]) {
       $("#season").html("<img class='wimg' src='" + pics[2] +"'/>");
-      $("body").css('background-color', "#F4A259");
+      $("body").css('background-color', colours[2]);
     }  else if (temp <= thresholds[2]) {
       $("#season").html("<img class='wimg' src='" + pics[1] +"'/>");
-      $("body").css('background-color', "#8CB369");
+      $("body").css('background-color', colours[1]);
     }  else {
       $("#season").html("<img class='wimg' src='" + pics[0] +"'/>");
-      $("body").css('background-color', "#F4E285");
+      $("body").css('background-color', colours[0]);
     }
   }
 
