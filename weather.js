@@ -29,7 +29,7 @@ $(document).ready(function() {
         var lat = position.coords.latitude;
         var lng = position.coords.longitude;
 
-        var apisrc = "https://crossorigin.me/http://api.openweathermap.org/data/2.5/weather?lat="
+        var apisrc = "https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?lat="
         + lat + "&lon=" + lng + "&appid=" + apiKey + "&units=" + units;
 
         $.getJSON(apisrc, function(json) {
